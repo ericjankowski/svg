@@ -10,3 +10,4 @@ TODO
 - do some validation of the get parameters in shape controller
 - display interior angle value
 - display interior angle image
+- Build a form on shape.htm that takes sidelength and numsides
