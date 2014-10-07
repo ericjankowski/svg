@@ -21,4 +21,27 @@ public class Shape {
 		this.lengthOfSide = lengthOfSide;
 	}
 
+	public double getArea() {
+		return 0.25*numberOfSides*lengthOfSide*lengthOfSide * (1.0/Math.tan(Math.PI/numberOfSides));
+	}
+	
+	public String getPoints(){
+		double width = 400.0;
+		double center = width * 0.5;
+		double radius = center * 0.75;
+		double angle = 2 * Math.PI / numberOfSides;
+		double x = center;
+		double y = center - radius;
+		
+		String points = "" + x + "," + y + " ";
+
+		for (int i = 1; i<= numberOfSides; i++){
+			x = center + ((Math.sin(angle * i)))*radius;
+			y = center - ((Math.cos(angle * i)))*radius;
+			points += x + "," + y + " ";
+		}
+		
+		return points;
+	}
+
 }
